@@ -15,5 +15,5 @@ A very simple blocklist bot for telegram. It will check if a user is in a blockl
 ### How to block other users
 
 1. Stop running the script.
-2. Edit the source code and add an entry in the `BAN_LIST`.
+2. Edit the source code and add an entry in the `BLOCKLIST`.
 3. Run the script again.
