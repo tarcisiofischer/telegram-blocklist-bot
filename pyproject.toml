@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "telegram_blocklist_bot"
+version = "0.1.0"
+description = "A blocklist bot for Telegram"
+authors = ["Tarcísio Fischer <tarcisio.fischer.cco@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-telegram-bot = "^13.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

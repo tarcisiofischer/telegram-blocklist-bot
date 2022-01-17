@@ -19,6 +19,7 @@ BLOCKLIST = [
     'Hadassa Cursos',
 ]
 
+
 def handle_blocklist(update: Update, context: CallbackContext) -> None:
     bot = context.bot
     msg = update.message
@@ -29,7 +30,7 @@ def handle_blocklist(update: Update, context: CallbackContext) -> None:
             msg.reply_text("Bye bye.")
 
 
-def run_bot(bot_token) -> None:
+def run_bot(bot_token: str) -> None:
     updater = Updater(bot_token)
     dispatcher = updater.dispatcher
     dispatcher.add_handler(MessageHandler(None, handle_blocklist))
