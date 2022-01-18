@@ -27,7 +27,7 @@ def handle_blocklist(update: Update, context: CallbackContext) -> None:
     bot = context.bot
     msg = update.message
     for new_member in msg.new_chat_members:
-        if new_member.first_name.lower() in BLOCKLIST or new_member.last_name.lower() in BLOCKLIST or new_member.username.lower() in BLOCKLIST:
+        if set([new_member.first_name.lower(), new_member.last_name.lower(), new_member.username.lower()]) & set(BLOCKLIST):
             msg.reply_text(f"{new_member.first_name}, you are not welcome here.")
             bot.banChatMember(chat_id=msg.chat.id, user_id=new_member.id)
             msg.reply_text("Bye bye.")
